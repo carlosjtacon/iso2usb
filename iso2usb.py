@@ -20,5 +20,6 @@ os.system('sudo diskutil unmount /dev/%s' % diskid)
 print 'It is not stuck, just wait until it finishes.'
 print 'Creating bootable usb...'
 os.system('sudo dd bs=1m if=bootable.img of=/dev/r%s' % diskid)
+os.system('rm -f bootable.img')
 
 print 'Done!'
